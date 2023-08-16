@@ -1,0 +1,9 @@
+.env
+*.DS_Store
+*.db
+.idea/
+venv/
+build/
+dist/
+test/
+__pycache__
