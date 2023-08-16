@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 import discord
+import keep_alive
 from discord.ext import commands
 from discord.ext.commands import Command
 from sqlalchemy import select
@@ -70,6 +71,9 @@ async def on_command_error(ctx, error):
 def main():
     # Creates database
     Base.metadata.create_all(bind=db.engine)
+
+    #HTTP up down check
+    keep_alive.keep_alive()
 
     # Initializes all handlers
     for handler in all_handlers:
