@@ -1,4 +1,4 @@
-Pillow==9.0.0
+Pillow==10.0.1
 SQLAlchemy==1.4.31
 aiohttp==3.8.2
 dateparser==1.1.0
